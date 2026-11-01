@@ -9,7 +9,8 @@ Works with Claude, Codex, Gemini CLI, Cursor, GitHub Copilot and other tools tha
 | Country | Finance | Jobs |
 |---|---|---|
 | 🇨🇦 Canada | TFSA/RRSP/FHSA room, ACB and capital gains, superficial loss | Canadian resume, cover letter, interview prep |
-| 🇮🇳 India | Income tax new vs old regime, STCG/LTCG, returning NRI guide | Indian resume and Naukri profile, interview prep and CTC negotiation |
+| 🇮🇳 India | Income tax new vs old regime, STCG/LTCG, GST and GSTIN check, returning NRI guide | Indian resume and Naukri profile, interview prep and CTC negotiation |
+| 🇺🇸 United States | Federal tax and capital gains (2026), 401(k)/IRA/Roth limits | US resume and cover letter, interview prep and offer negotiation |
 | Your country? | [Add it](CONTRIBUTING.md) | |
 
 ## Install
@@ -21,6 +22,8 @@ Claude Code (install only the countries you need):
 /plugin install canada-jobs@country-skills
 /plugin install india-finance@country-skills
 /plugin install india-jobs@country-skills
+/plugin install us-finance@country-skills
+/plugin install us-jobs@country-skills
 ```
 
 Codex, Gemini CLI, Cursor, Copilot and 30+ other agents:
@@ -37,8 +40,10 @@ ChatGPT, Gemini app or any chat AI: paste the text of a `SKILL.md` into the chat
 
 **canada-finance:** `canada-registered-accounts`, `canada-capital-gains`
 **canada-jobs:** `canada-resume`, `canada-cover-letter`, `canada-interview-prep`
-**india-finance:** `india-income-tax`, `india-capital-gains`, `india-nri-return`
+**india-finance:** `india-income-tax`, `india-capital-gains`, `india-gst`, `india-nri-return`
 **india-jobs:** `india-resume`, `india-interview-prep`
+**us-finance:** `us-income-tax`, `us-retirement-accounts`
+**us-jobs:** `us-resume`, `us-interview-prep`
 
 ## Try the scripts
 
@@ -47,6 +52,8 @@ python plugins/canada-finance/skills/canada-registered-accounts/scripts/tfsa_roo
 python plugins/canada-finance/skills/canada-capital-gains/scripts/acb.py examples/canada-trades.csv
 python plugins/india-finance/skills/india-income-tax/scripts/tax_calc.py --income 1500000 --salaried
 python plugins/india-finance/skills/india-capital-gains/scripts/cg.py examples/india-tradebook.csv
+python plugins/india-finance/skills/india-gst/scripts/gst.py calc 50000 18 --from 07 --to 29
+python plugins/us-finance/skills/us-income-tax/scripts/us_tax.py --wages 85000 --ltcg 4000
 ```
 
 Python 3.9+, no dependencies.

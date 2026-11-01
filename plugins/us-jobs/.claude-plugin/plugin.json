@@ -1,0 +1,7 @@
+{
+  "name": "us-jobs",
+  "description": "US resumes and cover letters, behavioral interview prep and offer negotiation",
+  "version": "0.1.0",
+  "author": { "name": "Ronit Gupta" },
+  "keywords": ["usa", "resume", "interview", "salary-negotiation"]
+}

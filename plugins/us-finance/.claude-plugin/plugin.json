@@ -1,0 +1,7 @@
+{
+  "name": "us-finance",
+  "description": "US federal income tax and capital gains for 2026, 401(k)/IRA/Roth limits and which account to fund first",
+  "version": "0.1.0",
+  "author": { "name": "Ronit Gupta" },
+  "keywords": ["usa", "income-tax", "401k", "roth-ira", "capital-gains"]
+}

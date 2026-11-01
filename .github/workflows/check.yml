@@ -19,3 +19,5 @@ jobs:
           python3 plugins/canada-finance/skills/canada-capital-gains/scripts/acb.py examples/canada-trades.csv
           python3 plugins/india-finance/skills/india-income-tax/scripts/tax_calc.py --income 1500000 --salaried
           python3 plugins/india-finance/skills/india-capital-gains/scripts/cg.py examples/india-tradebook.csv
+          python3 plugins/india-finance/skills/india-gst/scripts/gst.py check 27AAPFU0939F1ZV
+          python3 plugins/us-finance/skills/us-income-tax/scripts/us_tax.py --wages 85000 --ltcg 4000 --magi 160500

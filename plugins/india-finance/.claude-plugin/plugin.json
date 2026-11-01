@@ -1,7 +1,16 @@
 {
   "name": "india-finance",
-  "description": "Income tax new vs old regime, STCG/LTCG on shares and MFs, returning NRI checklist",
+  "description": "Income tax new vs old regime, STCG/LTCG on shares and MFs, GST for businesses, returning NRI checklist",
   "version": "0.1.0",
-  "author": { "name": "Ronit Gupta" },
-  "keywords": ["india", "income-tax", "ltcg", "nri", "mutual-funds"]
+  "author": {
+    "name": "Ronit Gupta"
+  },
+  "keywords": [
+    "india",
+    "income-tax",
+    "ltcg",
+    "nri",
+    "mutual-funds",
+    "gst"
+  ]
 }

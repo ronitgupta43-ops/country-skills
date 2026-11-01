@@ -1,7 +1,10 @@
 {
   "name": "country-skills",
-  "owner": { "name": "Ronit Gupta", "url": "https://github.com/ronitgupta43-ops" },
-  "description": "AI skills for money and jobs, country by country: taxes, investing, resumes and interviews. Canada and India so far.",
+  "owner": {
+    "name": "Ronit Gupta",
+    "url": "https://github.com/ronitgupta43-ops"
+  },
+  "description": "AI skills for money and jobs, country by country: taxes, investing, resumes and interviews. Canada, India and the US so far.",
   "plugins": [
     {
       "name": "canada-finance",
@@ -16,12 +19,22 @@
     {
       "name": "india-finance",
       "source": "./plugins/india-finance",
-      "description": "Income tax new vs old regime, STCG/LTCG on shares and MFs, returning NRI checklist"
+      "description": "Income tax new vs old regime, STCG/LTCG on shares and MFs, GST for businesses, returning NRI checklist"
     },
     {
       "name": "india-jobs",
       "source": "./plugins/india-jobs",
       "description": "Indian resumes and Naukri profiles, interview prep and CTC negotiation"
+    },
+    {
+      "name": "us-finance",
+      "source": "./plugins/us-finance",
+      "description": "US federal income tax and capital gains for 2026, 401(k)/IRA/Roth limits and which account to fund first"
+    },
+    {
+      "name": "us-jobs",
+      "source": "./plugins/us-jobs",
+      "description": "US resumes and cover letters, behavioral interview prep and offer negotiation"
     }
   ]
 }
