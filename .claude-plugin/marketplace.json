@@ -1,0 +1,17 @@
+{
+  "name": "canada-claude-skills",
+  "owner": { "name": "Ronit Gupta", "url": "https://github.com/ronitgupta43-ops" },
+  "description": "Claude skills for life in Canada: TFSA/RRSP/FHSA, capital gains, resumes, cover letters and interviews",
+  "plugins": [
+    {
+      "name": "canada-finance",
+      "source": "./plugins/canada-finance",
+      "description": "TFSA/RRSP/FHSA room, ACB and capital gains with the superficial loss rule"
+    },
+    {
+      "name": "canada-jobs",
+      "source": "./plugins/canada-jobs",
+      "description": "Canadian-format resumes, tailored cover letters and interview prep for newcomers"
+    }
+  ]
+}

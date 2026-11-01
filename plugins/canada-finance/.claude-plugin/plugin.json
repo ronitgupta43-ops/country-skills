@@ -1,0 +1,7 @@
+{
+  "name": "canada-finance",
+  "description": "TFSA/RRSP/FHSA room, ACB and capital gains with the superficial loss rule",
+  "version": "0.1.0",
+  "author": { "name": "Ronit Gupta" },
+  "keywords": ["canada", "tfsa", "rrsp", "fhsa", "cra", "tax"]
+}

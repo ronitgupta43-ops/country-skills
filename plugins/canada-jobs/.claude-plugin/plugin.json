@@ -1,0 +1,7 @@
+{
+  "name": "canada-jobs",
+  "description": "Canadian-format resumes, tailored cover letters and interview prep for newcomers",
+  "version": "0.1.0",
+  "author": { "name": "Ronit Gupta" },
+  "keywords": ["canada", "resume", "cover-letter", "interview", "newcomer", "jobs"]
+}
