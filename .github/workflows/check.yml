@@ -5,10 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with: { python-version: "3.9" }
       - name: JSON manifests parse
-        run: for f in .claude-plugin/marketplace.json plugins/*/.claude-plugin/plugin.json; do python -m json.tool "$f" > /dev/null || exit 1; done
+        run: for f in .claude-plugin/marketplace.json plugins/*/.claude-plugin/plugin.json; do python3 -m json.tool "$f" > /dev/null || exit 1; done
       - name: Skill name matches its folder
         run: |
           for f in plugins/*/skills/*/SKILL.md; do
@@ -17,7 +15,7 @@ jobs:
           done
       - name: Scripts pass their self-checks
         run: |
-          python plugins/canada-finance/skills/canada-registered-accounts/scripts/tfsa_room.py --start 2022
-          python plugins/canada-finance/skills/canada-capital-gains/scripts/acb.py examples/canada-trades.csv
-          python plugins/india-finance/skills/india-income-tax/scripts/tax_calc.py --income 1500000 --salaried
-          python plugins/india-finance/skills/india-capital-gains/scripts/cg.py examples/india-tradebook.csv
+          python3 plugins/canada-finance/skills/canada-registered-accounts/scripts/tfsa_room.py --start 2022
+          python3 plugins/canada-finance/skills/canada-capital-gains/scripts/acb.py examples/canada-trades.csv
+          python3 plugins/india-finance/skills/india-income-tax/scripts/tax_calc.py --income 1500000 --salaried
+          python3 plugins/india-finance/skills/india-capital-gains/scripts/cg.py examples/india-tradebook.csv
