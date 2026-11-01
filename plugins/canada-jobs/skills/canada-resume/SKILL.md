@@ -1,5 +1,5 @@
 ---
-name: canadian-resume
+name: canada-resume
 description: Rewrite or review a resume in Canadian format and tailor it to a job posting, especially for newcomers with international experience. Use when the user says "fix my resume", "Canadian resume", "tailor my resume to this job", or shares a resume with a job link.
 ---
 

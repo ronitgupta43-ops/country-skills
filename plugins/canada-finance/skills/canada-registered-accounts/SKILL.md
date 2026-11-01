@@ -1,5 +1,5 @@
 ---
-name: registered-accounts
+name: canada-registered-accounts
 description: Work out TFSA, RRSP and FHSA contribution room and which account to fund first. Use when the user asks "how much TFSA room do I have", "RRSP limit", "FHSA", "TFSA vs RRSP", or is a newcomer to Canada asking where to save.
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: interview-prep
+name: canada-interview-prep
 description: Prepare for a Canadian job interview with likely questions, STAR answers built from the user's own experience, and a mock interview. Use when the user says "I have an interview", "help me prepare", "mock interview", or "what will they ask".
 ---
 

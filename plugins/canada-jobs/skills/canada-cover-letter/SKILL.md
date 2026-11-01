@@ -1,5 +1,5 @@
 ---
-name: cover-letter
+name: canada-cover-letter
 description: Write a short, tailored Canadian cover letter from the user's resume and a job posting. Use when the user asks for a cover letter, a "letter for this job", or an application email.
 ---
 

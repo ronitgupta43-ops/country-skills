@@ -1,61 +1,57 @@
-# canada-claude-skills 🇨🇦
+# country-skills 🌍
 
-Claude skills for life in Canada: money and jobs. Most finance and career skills on GitHub assume the US. These follow CRA rules and Canadian hiring norms.
+AI skills for money and jobs, country by country. Most finance and career skills assume you live in the US. These follow each country's real tax rules and hiring norms.
 
-## Install (Claude Code)
+Works with Claude, Codex, Gemini CLI, Cursor, GitHub Copilot and other tools that read the open [Agent Skills](https://agentskills.io) format.
 
+| Country | Finance | Jobs |
+|---|---|---|
+| 🇨🇦 Canada | TFSA/RRSP/FHSA room, ACB and capital gains, superficial loss | Canadian resume, cover letter, interview prep |
+| 🇮🇳 India | Income tax new vs old regime, STCG/LTCG, returning NRI guide | Indian resume and Naukri profile, interview prep and CTC negotiation |
+| Your country? | [Add it](CONTRIBUTING.md) | |
+
+## Install
+
+Claude Code (install only the countries you need):
 ```
-/plugin marketplace add ronitgupta43-ops/canada-claude-skills
-/plugin install canada-finance@canada-claude-skills
-/plugin install canada-jobs@canada-claude-skills
+/plugin marketplace add ronitgupta43-ops/country-skills
+/plugin install canada-finance@country-skills
+/plugin install canada-jobs@country-skills
+/plugin install india-finance@country-skills
+/plugin install india-jobs@country-skills
 ```
 
-For claude.ai: zip any folder under `plugins/*/skills/` and upload it in Settings → Capabilities → Skills.
-
-## Install (Codex, Gemini CLI, Cursor, GitHub Copilot and 30+ other agents)
-
-The skills use the open [Agent Skills](https://agentskills.io) format, so the same files work in other AI tools:
-
+Codex, Gemini CLI, Cursor, Copilot and 30+ other agents:
 ```
-npx skills add ronitgupta43-ops/canada-claude-skills            # pick agents interactively
-npx skills add ronitgupta43-ops/canada-claude-skills -a codex   # or: gemini-cli, cursor, github-copilot
+npx skills add ronitgupta43-ops/country-skills
+npx skills add ronitgupta43-ops/country-skills --skill india-income-tax   # just one skill
 ```
 
-Manual install: copy a skill folder (e.g. `plugins/canada-jobs/skills/canadian-resume`) into your agent's skills folder — `~/.codex/skills/`, `~/.gemini/skills/`, `.cursor/skills/` or `.github/skills/`.
+claude.ai: zip a skill folder (e.g. `plugins/india-jobs/skills/india-resume`) and upload it in Settings → Capabilities → Skills.
 
-**ChatGPT, Gemini app or any chat AI without skills:** paste the text of a `SKILL.md` into a custom GPT, Gem or the chat itself, then ask your question.
+ChatGPT, Gemini app or any chat AI: paste the text of a `SKILL.md` into the chat (or a custom GPT / Gem), then ask your question.
 
-## What's inside
+## Skills
 
-### canada-finance
-| Skill | What it does |
-|---|---|
-| `registered-accounts` | TFSA room calculator, RRSP and FHSA rules, which account to fund first, notes for newcomers and people leaving Canada |
-| `capital-gains` | ACB (average cost) from a trades CSV, realized gains per year, superficial loss warnings |
-
-### canada-jobs
-| Skill | What it does |
-|---|---|
-| `canadian-resume` | Converts a resume to Canadian format and tailors it to a posting (ATS keywords) |
-| `cover-letter` | Short, specific cover letters without the filler |
-| `interview-prep` | Likely questions, STAR answers from your own experience, mock interviews, bank-role pack |
+**canada-finance:** `canada-registered-accounts`, `canada-capital-gains`
+**canada-jobs:** `canada-resume`, `canada-cover-letter`, `canada-interview-prep`
+**india-finance:** `india-income-tax`, `india-capital-gains`, `india-nri-return`
+**india-jobs:** `india-resume`, `india-interview-prep`
 
 ## Try the scripts
 
 ```
-python plugins/canada-finance/skills/registered-accounts/scripts/tfsa_room.py --start 2022
-python plugins/canada-finance/skills/capital-gains/scripts/acb.py examples/trades.csv
+python plugins/canada-finance/skills/canada-registered-accounts/scripts/tfsa_room.py --start 2022
+python plugins/canada-finance/skills/canada-capital-gains/scripts/acb.py examples/canada-trades.csv
+python plugins/india-finance/skills/india-income-tax/scripts/tax_calc.py --income 1500000 --salaried
+python plugins/india-finance/skills/india-capital-gains/scripts/cg.py examples/india-tradebook.csv
 ```
 
 Python 3.9+, no dependencies.
 
-## Related
-
-[canada-tax-toolkit](https://github.com/ronitgupta43-ops/canada-tax-toolkit) — Ontario income tax, CPP and EI calculator.
-
 ## Contributing
 
-PRs welcome — especially other provinces, Quebec rules, and broker CSV converters. Update the limits in `tfsa_room.py` and `registered-accounts/SKILL.md` each January.
+Know your country's tax rules or job market? Add it. See [CONTRIBUTING.md](CONTRIBUTING.md). Each country is maintained by people who live there, and limits are updated after each budget.
 
 Not financial, tax or legal advice.
 

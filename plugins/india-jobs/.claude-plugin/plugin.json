@@ -1,0 +1,7 @@
+{
+  "name": "india-jobs",
+  "description": "Indian resumes and Naukri profiles, interview prep and CTC negotiation",
+  "version": "0.1.0",
+  "author": { "name": "Ronit Gupta" },
+  "keywords": ["india", "resume", "naukri", "interview", "ctc"]
+}

@@ -1,7 +1,7 @@
 {
-  "name": "canada-claude-skills",
+  "name": "country-skills",
   "owner": { "name": "Ronit Gupta", "url": "https://github.com/ronitgupta43-ops" },
-  "description": "Claude skills for life in Canada: TFSA/RRSP/FHSA, capital gains, resumes, cover letters and interviews",
+  "description": "AI skills for money and jobs, country by country: taxes, investing, resumes and interviews. Canada and India so far.",
   "plugins": [
     {
       "name": "canada-finance",
@@ -12,6 +12,16 @@
       "name": "canada-jobs",
       "source": "./plugins/canada-jobs",
       "description": "Canadian-format resumes, tailored cover letters and interview prep for newcomers"
+    },
+    {
+      "name": "india-finance",
+      "source": "./plugins/india-finance",
+      "description": "Income tax new vs old regime, STCG/LTCG on shares and MFs, returning NRI checklist"
+    },
+    {
+      "name": "india-jobs",
+      "source": "./plugins/india-jobs",
+      "description": "Indian resumes and Naukri profiles, interview prep and CTC negotiation"
     }
   ]
 }

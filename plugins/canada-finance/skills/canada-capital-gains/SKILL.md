@@ -1,5 +1,5 @@
 ---
-name: capital-gains
+name: canada-capital-gains
 description: Adjusted cost base (average cost), realized capital gains/losses per year and superficial loss warnings for a Canadian non-registered account. Use when the user asks "what's my ACB", "how much tax if I sell", "capital gains", "superficial loss", or uploads a trades CSV.
 ---
 

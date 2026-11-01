@@ -1,13 +1,10 @@
 # AGENTS.md
 
-This repo is a collection of Agent Skills for Canadian personal finance and job searching. Each skill is a folder with a `SKILL.md` under `plugins/*/skills/`.
+This repo is a collection of Agent Skills for personal finance and job searching, one set per country. Each skill is a folder with a `SKILL.md` under `plugins/*/skills/`, named `<country>-<topic>`.
 
-When a user's request matches a skill's `description`, read that `SKILL.md` and follow it:
+When a user's request matches a skill's `description` and their country, read that `SKILL.md` and follow it:
 
-- `plugins/canada-finance/skills/registered-accounts` — TFSA/RRSP/FHSA room and rules
-- `plugins/canada-finance/skills/capital-gains` — ACB, capital gains, superficial loss
-- `plugins/canada-jobs/skills/canadian-resume` — Canadian-format resumes
-- `plugins/canada-jobs/skills/cover-letter` — tailored cover letters
-- `plugins/canada-jobs/skills/interview-prep` — interview questions, STAR answers, mock interviews
+- Canada: `canada-registered-accounts`, `canada-capital-gains` (plugins/canada-finance); `canada-resume`, `canada-cover-letter`, `canada-interview-prep` (plugins/canada-jobs)
+- India: `india-income-tax`, `india-capital-gains`, `india-nri-return` (plugins/india-finance); `india-resume`, `india-interview-prep` (plugins/india-jobs)
 
-Scripts are Python 3.9+ with no dependencies. Run them from the skill folder, e.g. `python scripts/tfsa_room.py --start 2022`.
+Scripts are Python 3.9+ with no dependencies. Run them from the skill folder, e.g. `python scripts/tax_calc.py --income 1500000 --salaried`.
