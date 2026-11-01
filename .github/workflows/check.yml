@@ -13,6 +13,8 @@ jobs:
             dir=$(basename "$(dirname "$f")")
             grep -q "^name: $dir$" "$f" || { echo "::error file=$f::name must be '$dir'"; exit 1; }
           done
+      - name: Scripts embedded in SKILL.md are up to date
+        run: python3 tools/embed.py --check
       - name: Scripts pass their self-checks
         run: |
           python3 plugins/canada-finance/skills/canada-registered-accounts/scripts/tfsa_room.py --start 2022

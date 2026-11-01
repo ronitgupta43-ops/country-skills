@@ -12,8 +12,9 @@ description: 2026 limits and rules for 401(k), traditional IRA, Roth IRA and HSA
 - Traditional IRA deduction phase-out if covered by a workplace plan: $81,000 to $91,000 single; $129,000 to $149,000 MFJ. If neither spouse has a workplace plan, it's fully deductible.
 
 ## Roth limit at a given income: run the script
+The calculator lives in the us-income-tax skill (`scripts/us_tax.py`); if that skill isn't installed, the code is at the end of us-income-tax's SKILL.md in this repo.
 ```
-python ../us-income-tax/scripts/us_tax.py --wages 160000 --magi 160500
+python us_tax.py --wages 160000 --magi 160500
 ```
 
 ## Usual order (general information, not advice)

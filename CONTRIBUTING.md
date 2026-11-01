@@ -54,6 +54,6 @@ claude plugin validate .
 python plugins/<country>-finance/skills/<skill>/scripts/<script>.py --help
 ```
 
-Then add a line running your script to `.github/workflows/check.yml` so CI tests it on every PR.
+Then add a line running your script to `.github/workflows/check.yml` so CI tests it on every PR. Also add a `## Calculator code` section ending in `<!-- embed: scripts/<script>.py -->` and an empty python code block to your SKILL.md, and run `python tools/embed.py`: some apps upload only SKILL.md, so the code has to live there too.
 
 Good first countries: UK, Australia, UAE, Germany, Philippines, Nigeria. Open an issue to claim one.
