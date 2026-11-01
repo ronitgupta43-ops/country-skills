@@ -1,0 +1,7 @@
+{
+  "name": "creator",
+  "description": "Content creator toolkit: hooks, captions and scripts (incl. Hindi, Punjabi, Hinglish), content calendar and repurposing, brand deals, rate cards and disclosure rules",
+  "version": "0.1.0",
+  "author": { "name": "Ronit Gupta" },
+  "keywords": ["creator", "influencer", "instagram", "youtube", "brand-deals", "hinglish"]
+}

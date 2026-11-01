@@ -21,3 +21,4 @@ jobs:
           python3 plugins/india-finance/skills/india-capital-gains/scripts/cg.py examples/india-tradebook.csv
           python3 plugins/india-finance/skills/india-gst/scripts/gst.py check 27AAPFU0939F1ZV
           python3 plugins/us-finance/skills/us-income-tax/scripts/us_tax.py --wages 85000 --ltcg 4000 --magi 160500
+          python3 plugins/creator/skills/creator-brand-deals/scripts/rates.py examples/creator-posts.csv --followers 25000 --cpm-low 15 --cpm-high 30

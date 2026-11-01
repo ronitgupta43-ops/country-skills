@@ -4,7 +4,7 @@
     "name": "Ronit Gupta",
     "url": "https://github.com/ronitgupta43-ops"
   },
-  "description": "AI skills for money and jobs, country by country: taxes, investing, resumes and interviews. Canada, India and the US so far.",
+  "description": "AI skills for money, jobs and content creators, country by country: taxes, investing, resumes, interviews, brand deals. Canada, India and the US so far.",
   "plugins": [
     {
       "name": "canada-finance",
@@ -35,6 +35,11 @@
       "name": "us-jobs",
       "source": "./plugins/us-jobs",
       "description": "US resumes and cover letters, behavioral interview prep and offer negotiation"
+    },
+    {
+      "name": "creator",
+      "source": "./plugins/creator",
+      "description": "Content creator toolkit: hooks, captions and scripts (incl. Hindi, Punjabi, Hinglish), content calendar and repurposing, brand deals, rate cards and disclosure rules"
     }
   ]
 }
