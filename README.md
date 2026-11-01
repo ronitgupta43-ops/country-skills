@@ -1,5 +1,7 @@
 # country-skills 🌍
 
+[![check](https://github.com/ronitgupta43-ops/country-skills/actions/workflows/check.yml/badge.svg)](https://github.com/ronitgupta43-ops/country-skills/actions/workflows/check.yml)
+
 AI skills for money and jobs, country by country. Most finance and career skills assume you live in the US. These follow each country's real tax rules and hiring norms.
 
 Works with Claude, Codex, Gemini CLI, Cursor, GitHub Copilot and other tools that read the open [Agent Skills](https://agentskills.io) format.

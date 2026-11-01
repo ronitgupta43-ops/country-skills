@@ -54,4 +54,6 @@ claude plugin validate .
 python plugins/<country>-finance/skills/<skill>/scripts/<script>.py --help
 ```
 
+Then add a line running your script to `.github/workflows/check.yml` so CI tests it on every PR.
+
 Good first countries: UK, US, Australia, UAE, Germany, Philippines, Nigeria. Open an issue to claim one.
