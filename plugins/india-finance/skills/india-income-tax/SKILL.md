@@ -24,7 +24,7 @@ Old regime (must opt out of new): nil to 2.5L, 5% to 5L, 20% to 10L, 30% above. 
 ## Before running, ask for
 - Gross annual income (not CTC: remove employer PF and gratuity).
 - Salaried or not.
-- Old-regime deductions, if they want a comparison.
+- Old-regime deductions, if they want a comparison. Apply each section's cap before passing `--deductions`: 80C (incl. EPF, PPF, ELSS, life insurance, home loan principal) max Rs 1.5L, 80CCD(1B) NPS extra Rs 50,000, home loan interest Rs 2L. If the user says "2 lakh in 80C", count only Rs 1.5L and say why.
 
 ## Not handled (say so)
 - Surcharge above Rs 50L income.

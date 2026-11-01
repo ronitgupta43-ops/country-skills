@@ -4,6 +4,8 @@
 
 AI skills for money, jobs and content creators, country by country. Most finance and career skills assume you live in the US. These follow each country's real tax rules and hiring norms.
 
+![Demo: asking Claude which Indian tax regime to pick on a 15 lakh salary](docs/demo.gif)
+
 Works with Claude, Codex, Gemini CLI, Cursor, GitHub Copilot and other tools that read the open [Agent Skills](https://agentskills.io) format.
 
 | Country | Finance | Jobs |
