@@ -9,7 +9,7 @@
     {
       "name": "canada-finance",
       "source": "./plugins/canada-finance",
-      "description": "TFSA/RRSP/FHSA room, ACB and capital gains with the superficial loss rule"
+      "description": "TFSA/RRSP/FHSA room, ACB and capital gains with the superficial loss rule, first home (down payment, stress test, land transfer tax)"
     },
     {
       "name": "canada-jobs",
@@ -45,6 +45,11 @@
       "name": "crypto",
       "source": "./plugins/crypto",
       "description": "Crypto portfolio from Binance, Coinbase, Wealthsimple and wallet CSV exports (no API keys): one ledger, holdings and profit/loss"
+    },
+    {
+      "name": "money",
+      "source": "./plugins/money",
+      "description": "Money skills that work in any country: debt payoff plans (avalanche vs snowball)"
     }
   ]
 }

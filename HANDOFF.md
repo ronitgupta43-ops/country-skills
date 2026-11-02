@@ -1,7 +1,7 @@
 # Handoff  (updated 2026-11-02)
 
 ## What this repo is
-Free, MIT-licensed AI skills for tax, money, jobs, creators and crypto in India, Canada and the US. 25 skills in 8 plugins. Works in Claude Code, the Claude app, Codex, Gemini, Cursor and Copilot. Goal: GitHub stars and an application to Claude for Open Source.
+Free, MIT-licensed AI skills for tax, money, jobs, creators and crypto in India, Canada and the US. 27 skills in 9 plugins. Works in Claude Code, the Claude app, Codex, Gemini, Cursor and Copilot. Goal: GitHub stars and an application to Claude for Open Source.
 
 ## Layout
 - plugins/<plugin>/skills/<skill>/SKILL.md - the skills; scripts/ beside them hold the calculators
@@ -28,13 +28,15 @@ Free, MIT-licensed AI skills for tax, money, jobs, creators and crypto in India,
 - Website: no eyebrows or all-caps labels, every animation has a reduced-motion fallback.
 
 ## Done recently
+- New skills: canada-first-home (down payment, CMHC, stress test, ON/Toronto LTT) and money/debt-payoff (avalanche vs snowball)
 - Six-page website (home, india, canada, us, creators, crypto) with live calculators, video and photos
 - Crypto plugin (crypto-portfolio: CA/IN/US tax from exchange CSVs, no API keys)
 - Creator plugin (writer, plan, brand deals)
 - Promo reels: tax-regime video (docs/media) and a 20s reel with Runway pictures (not in repo)
 
 ## Next / open
-- Post the new reel and website; check r/PersonalFinanceCanada and r/IndiaInvestments for skill ideas
+- Post the new reel and website
+- Skill idea from r/IndiaInvestments: RSUs and foreign stocks for Indian residents (vesting tax, Schedule FA, foreign tax credit)
 - Rules change each January: follow the yearly-update issue checklist
 
 ## Gotchas

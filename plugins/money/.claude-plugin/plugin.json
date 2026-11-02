@@ -1,0 +1,7 @@
+{
+  "name": "money",
+  "description": "Money skills that work in any country: debt payoff plans (avalanche vs snowball)",
+  "version": "0.1.0",
+  "author": { "name": "Ronit Gupta" },
+  "keywords": ["debt", "credit card", "budget", "payoff", "snowball", "avalanche"]
+}
