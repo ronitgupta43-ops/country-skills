@@ -46,6 +46,7 @@ def page(name, body):
 <footer class="container footer">
   <p class="mast">Country Skills</p>
   <nav aria-label="Footer"><ul><li><a href="index.html">Home</a></li>{links(name)}<li><a href="{REPO}">GitHub</a></li></ul></nav>
+  <p>Home page photograph: <a href="https://commons.wikimedia.org/wiki/File:Vallee-brouillard.jpg">Thomas Bresson</a>, CC BY 3.0.</p>
   <p>Free and open source under the MIT licence. Rules checked for 2026 and reviewed every January.</p>
   <p>These skills explain and calculate. They are not tax, legal or financial advice, so check big decisions with a professional.</p>
 </footer>

@@ -10,7 +10,7 @@ Free, MIT-licensed AI skills for tax, money, jobs, creators and crypto in India,
 - examples/*.csv - sample inputs the scripts and CI run on
 - tools/build.py - embeds each script into its SKILL.md (`<!-- embed: path -->`) and writes the skill tree into README.md and AGENTS.md
 - site-src/*.html - website page bodies; tools/build_site.py wraps them into docs/*.html (shared head, nav, footer)
-- docs/ - GitHub Pages site (Hallmark Paste-up theme): site.css, tokens.css, base.css, calc.js (browser ports of the calculators), site.js, fonts/, img/, media/
+- docs/ - GitHub Pages site (Hallmark Dusk theme: glass panels on slate, fog photograph behind the home hero, hotlinked from Wikimedia with credit in the footer): site.css, tokens.css, base.css, calc.js (browser ports of the calculators), site.js, fonts/, img/, media/
 - tools/check_site.py - compares calc.js with the Python scripts on 1,500 random cases
 - .github/workflows/check.yml - CI; yearly-update.yml opens a rules-update issue every Jan 5
 
@@ -18,7 +18,7 @@ Free, MIT-licensed AI skills for tax, money, jobs, creators and crypto in India,
 - after editing a skill or script: `python3 tools/build.py`
 - after editing site-src: `python3 tools/build_site.py`
 - check everything: `python3 tools/build.py --check && python3 tools/build_site.py --check && python3 tools/check_site.py && claude plugin validate .`
-- design lint: `node ~/.claude/skills/hallmark/scripts/sloplint.mjs docs/{index,india,canada,us,creators,crypto}.html --genre playful --render`
+- design lint: `node ~/.claude/skills/hallmark/scripts/sloplint.mjs docs/{index,india,canada,us,creators,crypto}.html --genre modern-minimal --render`
 
 ## Conventions
 - Commits authored as `ronitgupta43-ops <ronitgupta43@gmail.com>`, with NO Co-Authored-By line.
@@ -40,7 +40,7 @@ Free, MIT-licensed AI skills for tax, money, jobs, creators and crypto in India,
 - Rules change each January: follow the yearly-update issue checklist
 
 ## Gotchas
-- League Gothic has no ₹; the site's font stack falls back to Newsreader for it
+- Wix Madefor fonts: ₹ lives in the latin-ext files, so keep both unicode-range faces
 - JS rounding must match Python's round-half-even (pyRound in calc.js)
 - The cloud workspace can't reach Google Fonts, github.io or Runway downloads; fonts are self-hosted via npm fontsource
 - pkill with a pattern that matches your own command kills the shell
