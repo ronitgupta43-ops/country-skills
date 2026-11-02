@@ -4,7 +4,7 @@
     "name": "Ronit Gupta",
     "url": "https://github.com/ronitgupta43-ops"
   },
-  "description": "AI skills for money, jobs and content creators, country by country: taxes, investing, resumes, interviews, brand deals. Canada, India and the US so far.",
+  "description": "AI skills for money, jobs, crypto and creators, country by country: taxes, investing, crypto tax, resumes, interviews and brand deals. Canada, India and the US so far.",
   "plugins": [
     {
       "name": "canada-finance",
@@ -40,6 +40,11 @@
       "name": "creator",
       "source": "./plugins/creator",
       "description": "Content creator toolkit: hooks, captions and scripts (incl. Hindi, Punjabi, Hinglish), content calendar and repurposing, brand deals, rate cards and disclosure rules"
+    },
+    {
+      "name": "crypto",
+      "source": "./plugins/crypto",
+      "description": "Crypto portfolio from Binance, Coinbase, Wealthsimple and wallet CSV exports (no API keys): one ledger, holdings and profit/loss"
     }
   ]
 }

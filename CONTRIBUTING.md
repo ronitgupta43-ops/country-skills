@@ -24,7 +24,7 @@ Prefix every skill name with the country (`uk-income-tax`, not `income-tax`) so 
 }
 ```
 
-Then add the plugin to `.claude-plugin/marketplace.json` and the table in `README.md`.
+Then add the plugin to `.claude-plugin/marketplace.json` and run `python tools/build.py`: it adds your skills to the skill tree in README.md and AGENTS.md automatically.
 
 ## 3. SKILL.md
 
@@ -54,6 +54,6 @@ claude plugin validate .
 python plugins/<country>-finance/skills/<skill>/scripts/<script>.py --help
 ```
 
-Then add a line running your script to `.github/workflows/check.yml` so CI tests it on every PR. Also add a `## Calculator code` section ending in `<!-- embed: scripts/<script>.py -->` and an empty python code block to your SKILL.md, and run `python tools/embed.py`: some apps upload only SKILL.md, so the code has to live there too.
+Then add a line running your script to `.github/workflows/check.yml` so CI tests it on every PR. Also add a `## Calculator code` section ending in `<!-- embed: scripts/<script>.py -->` and an empty python code block to your SKILL.md, and run `python tools/build.py`: some apps upload only SKILL.md, so the code has to live there too.
 
 Good first countries: UK, Australia, UAE, Germany, Philippines, Nigeria. Open an issue to claim one.

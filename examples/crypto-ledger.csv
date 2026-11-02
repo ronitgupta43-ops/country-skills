@@ -1,0 +1,9 @@
+date,type,asset,qty,price,fee,exchange,to
+2025-01-15,buy,BTC,0.05,58000,15,Wealthsimple,
+2025-02-10,buy,ETH,1.2,4200,10,Coinbase,
+2025-04-01,income,ETH,0.02,3900,,Coinbase,
+2025-05-20,buy,BTC,0.03,140000,12,Binance,
+2025-06-01,transfer,BTC,0.05,0,,Wealthsimple,Binance
+2025-09-15,sell,ETH,0.5,3100,8,Coinbase,
+2025-09-30,buy,ETH,0.5,3000,8,Coinbase,
+2026-03-10,sell,BTC,0.04,150000,20,Binance,

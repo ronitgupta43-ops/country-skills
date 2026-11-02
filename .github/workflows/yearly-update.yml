@@ -1,0 +1,27 @@
+name: yearly-update
+on:
+  schedule:
+    - cron: "0 14 5 1 *"   # 5 January every year
+  workflow_dispatch:
+permissions:
+  issues: write
+jobs:
+  open-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Open the yearly limits issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          year=$(date +%Y)
+          {
+            echo "New tax year: check every number below against the official source, update the SKILL.md and script, run \`python tools/build.py\`, and tick it off."
+            echo
+            for f in plugins/*-finance/skills/*/SKILL.md plugins/crypto/skills/*/SKILL.md; do
+              echo "- [ ] \`$(basename $(dirname $f))\` ($(grep -oE '20[0-9]{2}' $f | sort -u | tr '\n' ' '))"
+            done
+            echo
+            echo "Sources: CRA (canada.ca), IRS (irs.gov), Income Tax India (incometax.gov.in), GST (gst.gov.in), Union Budget (1 Feb)."
+          } > body.md
+          gh issue create --title "Yearly update: tax limits for $year" --body-file body.md
