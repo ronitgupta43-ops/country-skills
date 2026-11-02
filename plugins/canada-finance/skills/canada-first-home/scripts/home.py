@@ -88,7 +88,7 @@ if __name__ == "__main__":
     p = argparse.ArgumentParser()
     p.add_argument("--price", type=float, required=True)
     p.add_argument("--down", type=float, required=True)
-    p.add_argument("--rate", type=float, required=True, help="contract rate in %, e.g. 4.5")
+    p.add_argument("--rate", type=float, required=True, help="contract rate in percent, e.g. 4.5")
     p.add_argument("--years", type=int, default=25)
     p.add_argument("--first-time", action="store_true")
     p.add_argument("--toronto", action="store_true")
