@@ -2,7 +2,17 @@
 
 [![check](https://github.com/ronitgupta43-ops/country-skills/actions/workflows/check.yml/badge.svg)](https://github.com/ronitgupta43-ops/country-skills/actions/workflows/check.yml)
 
-AI skills for money, jobs, crypto and content creators, country by country. Most finance and career skills assume you live in the US. These follow each country's real tax rules and hiring norms, and every number comes from a tested calculator, not the AI's guess.
+**Free, open-source alternative to paid tax, crypto and career tools**, country by country. Use it in Claude, ChatGPT, Gemini, Codex or Cursor: ask in plain English, and every number comes from a tested calculator, not the AI's guess.
+
+| Instead of paying for | Use these free skills |
+|---|---|
+| Crypto tax apps (Koinly, CoinTracker) | `crypto-portfolio` + `canada-crypto-tax` / `india-crypto-tax` / `us-crypto-tax` |
+| Indian tax filing helpers (ClearTax-style regime and capital gains calculators) | `india-income-tax`, `india-capital-gains`, `india-gst` |
+| Tax and contribution calculators | `us-income-tax`, `us-retirement-accounts`, `canada-registered-accounts`, `canada-capital-gains` |
+| Resume writers and interview coaches | `canada-resume`, `india-resume`, `us-resume` and the `*-interview-prep` skills |
+| Creator managers and rate-card tools | `creator-brand-deals`, `creator-content-plan`, `creator-content-writer` |
+
+It covers the common cases for individuals. For businesses, DeFi-heavy crypto or anything unusual, a professional is still worth paying.
 
 ![Demo: asking Claude which Indian tax regime to pick on a 15 lakh salary](docs/demo.gif)
 
