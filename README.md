@@ -14,6 +14,8 @@
 
 It covers the common cases for individuals. For businesses, DeFi-heavy crypto or anything unusual, a professional is still worth paying.
 
+**Website:** [ronitgupta43-ops.github.io/country-skills](https://ronitgupta43-ops.github.io/country-skills/)
+
 ![Demo: asking Claude which Indian tax regime to pick on a 15 lakh salary](docs/demo.gif)
 
 Works with Claude, Codex, Gemini CLI, Cursor, GitHub Copilot and other tools that read the open [Agent Skills](https://agentskills.io) format.
