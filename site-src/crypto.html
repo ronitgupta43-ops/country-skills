@@ -1,0 +1,56 @@
+<!-- Crypto portfolio and tax skills, no API keys | Free AI skill that merges Binance, Coinbase, Kraken, Wealthsimple, WazirX and CoinDCX exports into one ledger, then works out crypto tax for Canada, India or the US. -->
+<section class="container hero">
+  <div class="head">
+    <h1>Every exchange, one ledger</h1>
+    <p class="lead">Drop in your CSV exports. No API keys, no account linking.</p>
+    <div class="actions"><a class="btn btn--primary" href="index.html#install">Install free</a></div>
+  </div>
+  <div class="product merge" data-slot="ledger" data-kind="product" data-alt="Exchange exports merging into one ledger">
+    <div class="sources" data-keep>
+      <div class="sheet" style="--r:-1deg">Binance.csv</div>
+      <div class="sheet" style="--r:0.8deg">Coinbase.csv</div>
+      <div class="sheet" style="--r:-0.5deg">Wealthsimple.csv</div>
+    </div>
+    <span class="arrow" aria-hidden="true" data-keep>→</span>
+    <div class="ledger sheet sheet--card" data-keep>
+      <div class="row"><span>BTC 0.04</span><span>avg $89,087.50</span></div>
+      <div class="row"><span>ETH 1.22</span><span>avg $3,716.69</span></div>
+      <div class="row total"><span>Total cost</span><span>$8,097.86</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="container section">
+  <h2>One ledger, three tax rules</h2>
+  <p class="lead">The same eight trades from the repo’s example ledger, run through crypto-portfolio for each country.</p>
+  <div class="wall">
+    <div class="sheet sheet--fluoro w4" style="--r:-0.8deg"><span class="fig">CA$2,416</span><p>Canada 2026 gain, half of it taxable. The 2025 ETH loss gets a superficial-loss warning.</p></div>
+    <div class="sheet w4" style="--r:0.6deg"><span class="fig">₹1,148</span><p>India tax at 30% plus cess. The ₹550 loss can’t be set off.</p></div>
+    <div class="sheet w4" style="--r:-0.5deg"><span class="fig">$3,648</span><p>US long-term gain in 2026, lots tracked per wallet.</p></div>
+  </div>
+  <p class="cap">Example prices only, so the rupee figures are small. Your own exports give your real numbers.</p>
+</section>
+
+<section class="band">
+  <div class="container two flip">
+    <div class="words">
+      <h2>Your keys stay yours</h2>
+      <p class="lead">The skill reads files you export. It never asks for a password, a seed phrase or an API key.</p>
+    </div>
+    <ol class="media sheet steps" style="--r:-0.6deg">
+      <li><h3>Export</h3><p>Download trade history as CSV from each exchange.</p></li>
+      <li><h3>Upload</h3><p>Ask “track my crypto” and attach the files.</p></li>
+      <li><h3>Check</h3><p>Holdings, average cost and the tax for your country.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="container section">
+  <h2>What you can ask</h2>
+  <ul class="asks">
+    <li><q>Combine my Binance and Coinbase exports.</q><a href="https://github.com/ronitgupta43-ops/country-skills/blob/main/plugins/crypto/skills/crypto-portfolio/SKILL.md">crypto-portfolio</a></li>
+    <li><q>What’s my crypto tax in Canada this year?</q><a href="https://github.com/ronitgupta43-ops/country-skills/blob/main/plugins/canada-finance/skills/canada-crypto-tax/SKILL.md">canada-crypto-tax</a></li>
+    <li><q>How much TDS was cut on my WazirX sales?</q><a href="https://github.com/ronitgupta43-ops/country-skills/blob/main/plugins/india-finance/skills/india-crypto-tax/SKILL.md">india-crypto-tax</a></li>
+    <li><q>Short-term or long-term on this Bitcoin sale?</q><a href="https://github.com/ronitgupta43-ops/country-skills/blob/main/plugins/us-finance/skills/us-crypto-tax/SKILL.md">us-crypto-tax</a></li>
+  </ul>
+</section>

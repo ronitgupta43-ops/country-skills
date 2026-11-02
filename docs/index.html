@@ -3,349 +3,125 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>country-skills: free AI skills for tax, crypto and jobs in India, Canada and the US</title>
-<meta name="description" content="Ask a tax, crypto or job question in plain English and get the real number. Free skills for Claude, ChatGPT and Gemini, built on tested calculators for India, Canada and the US.">
-<meta property="og:title" content="country-skills: ask in plain English, get the real number">
-<meta property="og:description" content="Free AI skills for income tax, crypto tax, TFSA, GST, resumes and creator deals in India, Canada and the US.">
-<meta property="og:image" content="https://ronitgupta43-ops.github.io/country-skills/demo.gif">
-<style>
-@font-face{font-family:"Archivo";src:url(fonts/archivo-latin-wdth-normal.woff2) format("woff2-variations");font-weight:100 900;font-stretch:62% 125%;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:"Archivo";src:url(fonts/archivo-latin-ext-wdth-normal.woff2) format("woff2-variations");font-weight:100 900;font-stretch:62% 125%;font-display:swap;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:"Plex Mono";src:url(fonts/ibm-plex-mono-latin-500-normal.woff2) format("woff2");font-weight:500;font-display:swap;unicode-range:U+0000-00FF,U+2000-206F,U+2212}
-@font-face{font-family:"Plex Mono";src:url(fonts/ibm-plex-mono-latin-ext-500-normal.woff2) format("woff2");font-weight:500;font-display:swap;unicode-range:U+0100-02BA,U+20A0-20C0}
-@font-face{font-family:"Plex Mono";src:url(fonts/ibm-plex-mono-latin-600-normal.woff2) format("woff2");font-weight:600;font-display:swap;unicode-range:U+0000-00FF,U+2000-206F,U+2212}
-@font-face{font-family:"Plex Mono";src:url(fonts/ibm-plex-mono-latin-ext-600-normal.woff2) format("woff2");font-weight:600;font-display:swap;unicode-range:U+0100-02BA,U+20A0-20C0}
-
-:root{
-  --paper:#EAF0E8; --sheet:#FBFCF8; --ink:#172340; --ink-soft:#4A5671; --rule:#BFCDBB;
-  --stamp:#5B3CC4; --mark:#F2DF4E; --good:#1E7A4C;
-  --wide:118%; --measure:62ch;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.6 "Archivo",system-ui,sans-serif;font-stretch:100%;
-  background-image:repeating-linear-gradient(to bottom,transparent 0 31px,rgba(23,35,64,.045) 31px 32px)}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--stamp);outline-offset:3px;border-radius:4px}
-.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
-
-/* nav */
-.nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
-.brand{font-weight:800;font-stretch:var(--wide);font-size:1.15rem;text-decoration:none;letter-spacing:-.01em}
-.btn{display:inline-flex;align-items:center;gap:.5em;font:inherit;font-weight:650;text-decoration:none;border-radius:999px;padding:.72em 1.25em;border:2px solid var(--ink);cursor:pointer;transition:transform .15s,background .15s,color .15s}
-.btn:hover{transform:translateY(-1px)}
-.btn.solid{background:var(--ink);color:var(--sheet)}
-.btn.solid:hover{background:var(--stamp);border-color:var(--stamp)}
-.btn.line{background:transparent;color:var(--ink)}
-.btn.line:hover{background:var(--sheet)}
-.star{width:1em;height:1em;fill:currentColor}
-
-/* hero */
-.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:start;padding:40px 0 96px}
-h1{font-weight:850;font-stretch:125%;font-size:clamp(2.6rem,5.4vw,4.6rem);line-height:.98;letter-spacing:-.025em;margin:.2em 0 .45em}
-.lede{font-size:1.2rem;color:var(--ink-soft);max-width:34ch;margin:0 0 1.6em}
-.actions{display:flex;flex-wrap:wrap;gap:12px}
-.works{margin-top:28px;font-size:.95rem;color:var(--ink-soft)}
-.works b{color:var(--ink);font-weight:650}
-
-/* the slip */
-.desk{position:relative}
-.tabs{display:flex;gap:6px;padding-left:18px}
-.tab{font:inherit;font-weight:650;font-size:.98rem;padding:.55em 1.05em .75em;border:2px solid var(--ink);border-bottom:0;border-radius:12px 12px 0 0;background:var(--paper);color:var(--ink-soft);cursor:pointer;position:relative;top:2px}
-.tab[aria-selected="true"]{background:var(--ink);color:var(--sheet)}
-.printer{background:var(--ink);border-radius:18px;padding:14px 18px 0;box-shadow:0 18px 40px -18px rgba(23,35,64,.55)}
-.slot{height:10px;border-radius:6px;background:#0c1428;margin-bottom:-4px}
-.paper-clip{overflow:hidden;padding:0 10px 28px;margin:0 -8px}
-.slip{position:relative;background:var(--sheet);color:var(--ink);font-family:"Plex Mono",ui-monospace,monospace;font-weight:500;font-size:.93rem;line-height:1.55;padding:26px 26px 34px;
-  --tooth:radial-gradient(circle at 8px -2px,transparent 9px,var(--sheet) 9.5px);
-  -webkit-mask:linear-gradient(#000 0 0) top/100% calc(100% - 9px) no-repeat,radial-gradient(circle 7px at 50% 100%,transparent 6.5px,#000 7px) bottom/16px 9px repeat-x;
-          mask:linear-gradient(#000 0 0) top/100% calc(100% - 9px) no-repeat,radial-gradient(circle 7px at 50% 100%,transparent 6.5px,#000 7px) bottom/16px 9px repeat-x}
-.slip.print{animation:print .9s cubic-bezier(.2,.7,.2,1) both}
-@keyframes print{from{transform:translateY(-102%)}to{transform:translateY(0)}}
-.q{font-family:"Archivo",sans-serif;font-size:1.05rem;font-weight:600;line-height:1.4;margin:0 0 18px;padding-bottom:16px;border-bottom:2px dashed var(--rule)}
-.q small{display:block;font-weight:500;color:var(--ink-soft);font-size:.82rem;margin-bottom:4px}
-.row{display:flex;justify-content:space-between;gap:16px;padding:3px 0}
-.row span:last-child{text-align:right;white-space:nowrap}
-.row.muted{color:var(--ink-soft)}
-.row.total{border-top:2px solid var(--ink);margin-top:10px;padding-top:10px;font-weight:600;font-size:1.02rem}
-.hl{background:linear-gradient(transparent 12%,var(--mark) 12% 88%,transparent 88%);padding:0 4px;margin:0 -4px}
-.verdict{font-family:"Archivo",sans-serif;font-weight:750;font-size:1.15rem;margin:18px 0 0;line-height:1.3}
-.stamp{position:absolute;right:18px;bottom:42px;transform:rotate(-11deg);border:3px solid var(--stamp);color:var(--stamp);border-radius:8px;padding:6px 12px 5px;
-  font-family:"Archivo",sans-serif;font-stretch:120%;font-weight:800;font-size:.86rem;letter-spacing:.08em;line-height:1.15;text-align:center;opacity:.88;mix-blend-mode:multiply;
-  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2.2 1.6'/%3E%3C/filter%3E%3Crect width='60' height='60' filter='url(%23n)'/%3E%3C/svg%3E");
-          mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2.2 1.6'/%3E%3C/filter%3E%3Crect width='60' height='60' filter='url(%23n)'/%3E%3C/svg%3E")}
-.stamp small{display:block;font-size:.62rem;letter-spacing:.12em;font-weight:700}
-.skillref{margin:16px 0 0;font-size:.8rem;color:var(--ink-soft)}
-.verdict,.skillref{padding-right:150px}
-
-/* sections */
-section{padding:88px 0;border-top:2px solid var(--ink)}
-h2{font-weight:820;font-stretch:118%;font-size:clamp(1.9rem,3.6vw,2.9rem);line-height:1.04;letter-spacing:-.02em;margin:0 0 .4em;max-width:20ch}
-.sub{color:var(--ink-soft);max-width:var(--measure);margin:0 0 40px;font-size:1.1rem}
-
-/* instead of paying */
-.ledger{background:var(--sheet);border:2px solid var(--ink);border-radius:16px;overflow:hidden}
-.ledger-row{display:grid;grid-template-columns:1fr 1.25fr;gap:24px;padding:20px 26px;border-top:1px solid var(--rule);align-items:baseline}
-.ledger-row:first-child{border-top:0}
-.ledger-head{background:var(--ink);color:var(--sheet);font-weight:650;font-size:.95rem;padding:12px 26px}
-.paid{color:var(--ink-soft)}
-.paid s{text-decoration-color:var(--stamp);text-decoration-thickness:2px}
-.free b{font-weight:700}
-.free code{font-family:"Plex Mono",monospace;font-size:.84rem;background:var(--paper);padding:2px 7px;border-radius:5px;white-space:nowrap}
-.honest{margin:20px 0 0;color:var(--ink-soft);font-size:.98rem;max-width:var(--measure)}
-
-/* demo */
-.demo{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center}
-.frame{background:var(--sheet);border:2px solid var(--ink);border-radius:16px;padding:10px;box-shadow:10px 10px 0 var(--ink)}
-.frame img{display:block;width:100%;height:auto;border-radius:8px}
-
-/* countries */
-.countries{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:2px solid var(--ink);border-radius:16px;background:var(--sheet);overflow:hidden}
-.col{padding:26px 24px 30px;border-left:2px solid var(--ink)}
-.col:first-child{border-left:0}
-.col h3{font-weight:800;font-stretch:115%;font-size:1.35rem;margin:0 0 4px;letter-spacing:-.01em}
-.col .flag{font-size:1.6rem;line-height:1;display:block;margin-bottom:10px}
-.col ul{list-style:none;margin:16px 0 0;padding:0}
-.col li{padding:9px 0;border-top:1px solid var(--rule);font-size:.97rem;line-height:1.35}
-.col li a{text-decoration:none;font-weight:650}
-.col li a:hover{color:var(--stamp);text-decoration:underline}
-.col li span{display:block;color:var(--ink-soft);font-size:.86rem;margin-top:2px}
-
-/* steps */
-.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:28px;counter-reset:s}
-.steps>li{counter-increment:s;position:relative;padding-top:64px;min-width:0}
-.steps>li::before{content:counter(s);position:absolute;top:0;left:0;width:46px;height:46px;border-radius:50%;border:3px solid var(--stamp);color:var(--stamp);display:grid;place-items:center;font-weight:800;font-size:1.3rem;transform:rotate(-8deg)}
-.steps h3{font-weight:780;font-stretch:112%;font-size:1.3rem;margin:0 0 8px}
-.steps p{margin:0 0 12px;color:var(--ink-soft)}
-.way{background:var(--sheet);border:2px solid var(--ink);border-radius:12px;padding:12px 14px;margin-top:10px}
-.way b{display:block;font-size:.95rem;margin-bottom:6px}
-.cmd{display:flex;gap:8px;align-items:center}
-.cmd code{flex:1;min-width:0;font-family:"Plex Mono",monospace;font-size:.8rem;background:var(--paper);border-radius:6px;padding:8px 10px;overflow-x:auto;white-space:nowrap}
-.copy{font:inherit;font-size:.82rem;font-weight:650;border:2px solid var(--ink);background:var(--sheet);color:var(--ink);border-radius:8px;padding:6px 10px;cursor:pointer;min-width:74px}
-.copy.done{background:var(--good);border-color:var(--good);color:#fff}
-
-/* footer */
-footer{border-top:2px solid var(--ink);padding:56px 0 64px}
-.foot{display:flex;flex-wrap:wrap;gap:28px;justify-content:space-between;align-items:flex-end}
-.foot p{margin:0;max-width:58ch;color:var(--ink-soft);font-size:.95rem}
-.foot .big{font-weight:820;font-stretch:120%;font-size:1.6rem;color:var(--ink);margin-bottom:10px;line-height:1.1}
-
-@media (max-width:900px){
-  .hero{grid-template-columns:1fr;gap:40px;padding-bottom:72px}
-  .demo{grid-template-columns:1fr}
-  .countries{grid-template-columns:1fr 1fr}
-  .col:nth-child(3){border-left:0}
-  .col:nth-child(n+3){border-top:2px solid var(--ink)}
-  .steps{grid-template-columns:1fr}
-}
-@media (max-width:560px){
-  body{font-size:1rem}
-  .nav .btn{padding:.55em .9em;font-size:.92rem}
-  .ledger-row{grid-template-columns:1fr;gap:6px;padding:18px 20px}
-  .countries{grid-template-columns:1fr}
-  .col{border-left:0;border-top:2px solid var(--ink)}
-  .col:first-child{border-top:0}
-  .slip{padding:22px 18px 30px;font-size:.86rem}
-  .stamp{right:10px;bottom:36px;font-size:.74rem}
-  .verdict,.skillref{padding-right:118px}
-  section{padding:64px 0}
-}
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  .slip.print{animation:none}
-  .btn:hover{transform:none}
-}
-</style>
+<title>Country Skills: free AI skills for tax, money and jobs</title>
+<meta name="description" content="Free, open-source AI skills for income tax, capital gains, crypto, resumes and creator deals in India, Canada and the US. Works with Claude, Codex, Gemini, Cursor and Copilot.">
+<meta property="og:title" content="Country Skills: free AI skills for tax, money and jobs">
+<meta property="og:description" content="Free, open-source AI skills for income tax, capital gains, crypto, resumes and creator deals in India, Canada and the US. Works with Claude, Codex, Gemini, Cursor and Copilot.">
+<link rel="stylesheet" href="site.css">
 </head>
-<body>
-<div class="wrap">
-  <nav class="nav" aria-label="Main">
-    <a class="brand" href="#top">country-skills</a>
-    <a class="btn line" href="https://github.com/ronitgupta43-ops/country-skills"><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg>Star on GitHub</a>
-  </nav>
-
-  <header class="hero" id="top">
-    <div>
-      <h1>Ask a tax question in plain English. Get the real number.</h1>
-      <p class="lede">Free skills that teach Claude, ChatGPT and Gemini your country's tax, crypto and job rules, and make them use a tested calculator instead of guessing.</p>
-      <div class="actions">
-        <a class="btn solid" href="#start">Try it free</a>
-        <a class="btn line" href="#countries">See all 25 skills</a>
-      </div>
-      <p class="works">For <b>India</b>, <b>Canada</b> and the <b>US</b>. Works in Claude, ChatGPT, Gemini, Codex and Cursor. No sign-up, nothing to pay.</p>
-    </div>
-
-    <div class="desk">
-      <div class="tabs" role="tablist" aria-label="Choose a country">
-        <button class="tab" role="tab" id="t-in" aria-selected="true" aria-controls="slip" data-c="in">🇮🇳 India</button>
-        <button class="tab" role="tab" id="t-ca" aria-selected="false" aria-controls="slip" data-c="ca">🇨🇦 Canada</button>
-        <button class="tab" role="tab" id="t-us" aria-selected="false" aria-controls="slip" data-c="us">🇺🇸 US</button>
-      </div>
-      <div class="printer">
-        <div class="slot" aria-hidden="true"></div>
-        <div class="paper-clip">
-          <div class="slip print" id="slip" role="tabpanel" aria-live="polite" aria-labelledby="t-in"></div>
-        </div>
-      </div>
-    </div>
-  </header>
-</div>
-
-<section aria-labelledby="h-paid">
-  <div class="wrap">
-    <h2 id="h-paid">Stop paying for the basics</h2>
-    <p class="sub">Most people pay every year for tools that add up a few rules. These skills do the common cases for free, with the maths in code you can read.</p>
-    <div class="ledger">
-      <div class="ledger-head ledger-row"><span>Instead of paying for</span><span>Use these free skills</span></div>
-      <div class="ledger-row"><span class="paid"><s>Crypto tax apps</s> like Koinly or CoinTracker</span><span class="free"><b>Crypto ledger and tax report</b> from your Binance, Coinbase or Wealthsimple exports. <code>crypto-portfolio</code></span></div>
-      <div class="ledger-row"><span class="paid"><s>Tax regime and capital gains calculators</s> for India</span><span class="free"><b>New vs old regime, LTCG and STCG, GST</b> with the 80C cap and 2026 rules. <code>india-income-tax</code></span></div>
-      <div class="ledger-row"><span class="paid"><s>Contribution and tax calculators</s> for Canada and the US</span><span class="free"><b>TFSA, RRSP and FHSA room, ACB, federal tax, Roth limits.</b> <code>canada-registered-accounts</code></span></div>
-      <div class="ledger-row"><span class="paid"><s>Resume writers and interview coaches</s></span><span class="free"><b>Country-format resumes, cover letters and mock interviews</b> built from your real experience. <code>india-resume</code></span></div>
-      <div class="ledger-row"><span class="paid"><s>Creator managers and rate-card tools</s></span><span class="free"><b>Media kit, price per post, contract red flags and creator tax.</b> <code>creator-brand-deals</code></span></div>
-    </div>
-    <p class="honest">Covers the common cases for individuals. If you run a business, use DeFi heavily, or your situation is unusual, a professional is still worth paying.</p>
-  </div>
-</section>
-
-<section aria-labelledby="h-demo">
-  <div class="wrap demo">
-    <div>
-      <h2 id="h-demo">It runs the calculator, then explains</h2>
-      <p class="sub">Here's the India skill on claude.ai. It writes the calculator file, runs it, and answers with the table and the reason: 80C counts only up to ₹1.5 lakh.</p>
-    </div>
-    <div class="frame"><img src="demo.gif" width="1080" height="638" alt="Claude answering which tax regime to pick on a 15 lakh salary: new regime tax 97,500 rupees, old regime 2,10,600 rupees" loading="lazy"></div>
-  </div>
-</section>
-
-<section id="countries" aria-labelledby="h-countries">
-  <div class="wrap">
-    <h2 id="h-countries">Pick your country</h2>
-    <p class="sub">Each skill is one file. Open it, read exactly what the AI will do, and use only the ones you need.</p>
-    <div class="countries" id="cols"></div>
-  </div>
-</section>
-
-<section id="start" aria-labelledby="h-start">
-  <div class="wrap">
-    <h2 id="h-start">Start in two minutes</h2>
-    <p class="sub">Pick whichever AI you already use.</p>
-    <ol class="steps">
-      <li>
-        <h3>Open a skill</h3>
-        <p>Click any skill above. It opens the instructions file on GitHub.</p>
-      </li>
-      <li>
-        <h3>Give it to your AI</h3>
-        <div class="way"><b>ChatGPT, Gemini or any chat</b>Copy the whole file and paste it at the start of your chat.</div>
-        <div class="way"><b>claude.ai</b>Download the repo, zip the skill's folder, and upload it under Customize, then Skills.</div>
-        <div class="way"><b>Claude Code</b>
-          <div class="cmd"><code>/plugin marketplace add ronitgupta43-ops/country-skills</code><button class="copy" type="button">Copy</button></div>
-        </div>
-        <div class="way"><b>Codex, Cursor, Gemini CLI, Copilot</b>
-          <div class="cmd"><code>npx skills add ronitgupta43-ops/country-skills</code><button class="copy" type="button">Copy</button></div>
-        </div>
-      </li>
-      <li>
-        <h3>Ask like you'd ask a friend</h3>
-        <p>"I earn 15 lakh with 2 lakh in 80C, which regime?" or "What do I owe on my Coinbase trades this year?"</p>
-        <p>Upload your CSV exports or resume when it asks. Nothing is sent anywhere except the AI you chose.</p>
-      </li>
-    </ol>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap foot">
-    <div>
-      <p class="big">Free, open source, MIT licensed.</p>
-      <p>Not tax, legal or financial advice. Rates come from CRA, IRS and Income Tax India rules for 2026, and automated tests check every calculator on each change. Built by Ronit Gupta.</p>
-    </div>
+<body class="fibre">
+<!-- generated by tools/build_site.py from site-src/index.html; edit the source -->
+<header class="container nav">
+  <a class="wordmark" href="index.html">Country Skills</a>
+  <ul><li><a href="india.html">India</a></li><li><a href="canada.html">Canada</a></li><li><a href="us.html">US</a></li><li><a href="creators.html">Creators</a></li><li><a href="crypto.html">Crypto</a></li></ul>
+  <a class="btn btn--primary" href="index.html#install">Install free</a>
+</header>
+<main>
+<section class="container hero">
+  <div class="head">
+    <h1>Tax answers, not guesses</h1>
+    <p class="lead">Free AI skills for tax, money and jobs in three countries.</p>
     <div class="actions">
-      <a class="btn line" href="https://github.com/ronitgupta43-ops/country-skills/blob/main/CONTRIBUTING.md">Add your country</a>
-      <a class="btn solid" href="https://github.com/ronitgupta43-ops/country-skills"><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg>Star on GitHub</a>
+      <a class="btn btn--primary" href="#install">Install free</a>
+      <a class="btn btn--secondary" href="https://github.com/ronitgupta43-ops/country-skills">See the code</a>
     </div>
   </div>
+  <div class="product" data-slot="answer-slip" data-kind="product" data-alt="A real answer from the skills, printed as a slip">
+    <div class="printer" data-keep>
+      <div class="printer-tabs" role="tablist" aria-label="Pick a country">
+        <button type="button" role="tab" data-k="india" aria-selected="true">India</button>
+        <button type="button" role="tab" data-k="canada" aria-selected="false">Canada</button>
+        <button type="button" role="tab" data-k="us" aria-selected="false">US</button>
+      </div>
+      <div class="paper-out">
+        <div class="slip" aria-live="polite">
+          <p class="ask"><small>You ask india-income-tax</small>I earn ₹15 lakh with ₹2 lakh in 80C. Which regime?</p>
+          <div class="row"><span>New regime tax</span><span>₹97,500</span></div>
+          <div class="row"><span>Old regime tax</span><span>₹2,10,600</span></div>
+          <div class="row quiet"><span>80C capped at</span><span>₹1,50,000</span></div>
+          <div class="row total"><span>You save</span><span></span></div>
+          <span class="big"><span class="mark">₹1,13,100</span></span>
+          <p class="note">Pick the new regime.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="container two flip">
+    <div class="words">
+      <h2>Ask like you’d ask a friend</h2>
+      <p class="lead">Type your salary in plain words. The skill runs the real 2026 slabs in code and shows its working.</p>
+    </div>
+    <div class="media phone">
+      <video src="media/tax-regime.mp4" poster="media/tax-regime-poster.jpg" autoplay muted loop playsinline aria-label="Short video: new vs old tax regime worked out for a ₹15 lakh salary"></video>
+    </div>
+  </div>
+</section>
+
+<section class="container section">
+  <h2>Everything on one shelf</h2>
+  <div class="wall">
+    <div class="sheet sheet--fluoro w5" style="--r:-1.2deg"><span class="fig">25</span><p>skills, grouped in a tree so nothing gets lost</p></div>
+    <div class="sheet w4" style="--r:0.8deg"><span class="fig">3</span><p>countries: India, Canada and the US</p></div>
+    <div class="sheet w3" style="--r:-0.6deg"><span class="fig">$0</span><p>no sign-up, no API keys</p></div>
+    <div class="sheet w4" style="--r:0.5deg"><span class="fig">2026</span><p>limits and slabs, checked every January</p></div>
+    <div class="sheet w3" style="--r:-1deg"><span class="fig">MIT</span><p>fork it, change it, ship it</p></div>
+    <figure class="sheet sheet--card w5 photo" style="--r:1deg" data-slot="counter" data-alt="A shop counter with a card reader">
+      <img src="img/counter.jpg" alt="A shop counter with a card reader">
+    </figure>
+  </div>
+</section>
+
+<section class="container section">
+  <h2>Pick your country</h2>
+  <div class="boards">
+    <a class="board sheet" href="india.html" style="--r:-0.8deg"><span class="name">India</span>
+      <ul><li>New vs old regime</li><li>LTCG and STCG from your tradebook</li><li>GST and GSTIN checks</li><li>Crypto at 30% and NRI returns</li></ul><span class="go">Open India</span></a>
+    <a class="board sheet" href="canada.html" style="--r:0.6deg"><span class="name">Canada</span>
+      <ul><li>TFSA, RRSP and FHSA room</li><li>ACB and superficial losses</li><li>Creator and crypto tax</li><li>Canadian resume and interviews</li></ul><span class="go">Open Canada</span></a>
+    <a class="board sheet" href="us.html" style="--r:-0.4deg"><span class="name">US</span>
+      <ul><li>Federal tax with gains stacking</li><li>401(k), IRA and Roth limits</li><li>1099 and crypto tax</li><li>US resume and offer talks</li></ul><span class="go">Open US</span></a>
+  </div>
+</section>
+
+<section class="container section">
+  <h2>Skip the subscription</h2>
+  <div class="typed sheet sheet--card">
+    <table>
+      <thead><tr><th scope="col">Instead of paying for</th><th scope="col">Use these free skills</th></tr></thead>
+      <tbody>
+        <tr><td>Crypto tax apps</td><td><a href="crypto.html">crypto-portfolio</a> with the crypto tax skill for your country</td></tr>
+        <tr><td>Tax calculators</td><td>india-income-tax, us-income-tax, canada-registered-accounts</td></tr>
+        <tr><td>Resume coaches</td><td>a resume and interview-prep skill for each country</td></tr>
+        <tr><td>Creator managers</td><td><a href="creators.html">rate cards, pitches, contracts and captions</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="container section" id="install">
+  <h2>Install in a minute</h2>
+  <ol class="steps">
+    <li><h3>Claude Code</h3><p>Add the shelf, then any plugin.</p>
+      <div class="cmd"><code>/plugin marketplace add ronitgupta43-ops/country-skills</code><button class="btn btn--secondary copy" type="button">Copy</button></div></li>
+    <li><h3>Any agent</h3><p>Codex, Gemini, Cursor or Copilot.</p>
+      <div class="cmd"><code>npx skills add ronitgupta43-ops/country-skills</code><button class="btn btn--secondary copy" type="button">Copy</button></div></li>
+    <li><h3>Claude app</h3><p>Upload one skill folder as a zip under Settings, then Skills.</p>
+      <div class="cmd"><a class="btn btn--secondary" href="https://github.com/ronitgupta43-ops/country-skills/archive/refs/heads/main.zip">Download zip</a></div></li>
+  </ol>
+</section>
+</main>
+<footer class="container footer">
+  <p class="mast">Country Skills</p>
+  <nav aria-label="Footer"><ul><li><a href="index.html">Home</a></li><li><a href="india.html">India</a></li><li><a href="canada.html">Canada</a></li><li><a href="us.html">US</a></li><li><a href="creators.html">Creators</a></li><li><a href="crypto.html">Crypto</a></li><li><a href="https://github.com/ronitgupta43-ops/country-skills">GitHub</a></li></ul></nav>
+  <p>Free and open source under the MIT licence. Rules checked for 2026 and reviewed every January.</p>
+  <p>These skills explain and calculate. They are not tax, legal or financial advice, so check big decisions with a professional.</p>
 </footer>
-
-<script>
-const REPO = "https://github.com/ronitgupta43-ops/country-skills/blob/main/plugins/";
-// Every figure below is output from the repo's own calculators (2026 rules).
-const SLIPS = {
-  in: { ask: "I earn ₹15 lakh salary with ₹2 lakh in 80C. Which tax regime should I pick?", rows: [
-      ["New regime taxable", "₹14,25,000"], ["New regime tax + cess", "₹97,500", "hl"],
-      ["80C counted (capped)", "₹1,50,000", "muted"], ["Old regime taxable", "₹13,00,000"], ["Old regime tax + cess", "₹2,10,600"]],
-    total: ["You save with new", "₹1,13,100"], verdict: "Pick the new regime.", skill: "india-income-tax" },
-  ca: { ask: "I became a resident in 2022 and put $5,000 in my TFSA. How much room do I have now?", rows: [
-      ["Room 2022 to 2026", "$33,500"], ["Already contributed", "−$5,000", "muted"], ["Withdrawals added back", "$0", "muted"]],
-    total: ["Your 2026 TFSA room", "$28,500"], verdict: "You can still put in $28,500.", skill: "canada-registered-accounts" },
-  us: { ask: "I made $85,000 in wages and $4,000 in long-term gains. What's my federal tax?", rows: [
-      ["Standard deduction", "−$16,100", "muted"], ["Taxable income", "$72,900"], ["Tax on wages", "$9,870"], ["Tax on gains at 15%", "$600"]],
-    total: ["Federal income tax", "$10,470"], verdict: "About 11.8% of what you earned.", skill: "us-income-tax" }
-};
-const slip = document.getElementById("slip");
-const esc = s => s.replace(/[&<>]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" })[c]);
-function render(c) {
-  const s = SLIPS[c];
-  slip.innerHTML = `<p class="q"><small>You ask</small>${esc(s.ask)}</p>` +
-    s.rows.map(([a, b, k]) => `<div class="row ${k === "muted" ? "muted" : ""}"><span>${a}</span><span>${k === "hl" ? `<span class="hl">${b}</span>` : b}</span></div>`).join("") +
-    `<div class="row total"><span>${s.total[0]}</span><span class="hl">${s.total[1]}</span></div>` +
-    `<p class="verdict">${s.verdict}</p><p class="skillref">Skill used: ${s.skill}</p>` +
-    `<div class="stamp" aria-hidden="true">CALCULATED<small>NOT GUESSED</small></div>`;
-  slip.classList.remove("print"); void slip.offsetWidth; slip.classList.add("print");
-}
-document.querySelectorAll(".tab").forEach(t => t.addEventListener("click", () => {
-  document.querySelectorAll(".tab").forEach(x => x.setAttribute("aria-selected", x === t));
-  slip.setAttribute("aria-labelledby", t.id);
-  render(t.dataset.c);
-}));
-document.querySelector(".tabs").addEventListener("keydown", e => {
-  const tabs = [...document.querySelectorAll(".tab")], i = tabs.indexOf(document.activeElement);
-  if (i < 0 || !["ArrowLeft", "ArrowRight"].includes(e.key)) return;
-  const n = tabs[(i + (e.key === "ArrowRight" ? 1 : tabs.length - 1)) % tabs.length]; n.focus(); n.click();
-});
-render("in");
-
-const COLS = [
-  ["🇮🇳", "India", [
-    ["india-finance/skills/india-income-tax", "Income tax", "New vs old regime, 80C cap, 87A rebate"],
-    ["india-finance/skills/india-capital-gains", "Shares and mutual funds", "LTCG, STCG and the ₹1.25 lakh exemption"],
-    ["india-finance/skills/india-crypto-tax", "Crypto tax", "30% flat, 1% TDS, Schedule VDA"],
-    ["india-finance/skills/india-gst", "GST", "Rates, registration, GSTIN check"],
-    ["india-finance/skills/india-creator-tax", "Creator tax", "TDS on gifted products, GST"],
-    ["india-finance/skills/india-nri-return", "Moving back to India", "RNOR, NRE accounts, assets abroad"],
-    ["india-jobs/skills/india-resume", "Resume and Naukri", "Indian format, tailored to a posting"],
-    ["india-jobs/skills/india-interview-prep", "Interviews and CTC", "Mock interview, hike negotiation"]]],
-  ["🇨🇦", "Canada", [
-    ["canada-finance/skills/canada-registered-accounts", "TFSA, RRSP, FHSA", "Your room and which to fund first"],
-    ["canada-finance/skills/canada-capital-gains", "Capital gains", "ACB and superficial losses"],
-    ["canada-finance/skills/canada-crypto-tax", "Crypto tax", "ACB across all exchanges, T1135"],
-    ["canada-finance/skills/canada-creator-tax", "Creator tax", "PR packages, HST at $30,000"],
-    ["canada-jobs/skills/canada-resume", "Canadian resume", "For newcomers, tailored to a posting"],
-    ["canada-jobs/skills/canada-cover-letter", "Cover letter", "Short and specific"],
-    ["canada-jobs/skills/canada-interview-prep", "Interview prep", "STAR answers, mock interview"]]],
-  ["🇺🇸", "United States", [
-    ["us-finance/skills/us-income-tax", "Federal tax", "2026 brackets and capital gains"],
-    ["us-finance/skills/us-retirement-accounts", "401(k), IRA, Roth", "2026 limits and Roth income limit"],
-    ["us-finance/skills/us-crypto-tax", "Crypto tax", "Per-wallet basis, 1099-DA check"],
-    ["us-finance/skills/us-creator-tax", "Creator tax", "1099s, self-employment tax"],
-    ["us-jobs/skills/us-resume", "Resume and cover letter", "US format, ATS keywords"],
-    ["us-jobs/skills/us-interview-prep", "Interviews and offers", "Behavioral answers, negotiation"]]],
-  ["🌍", "Anywhere", [
-    ["crypto/skills/crypto-portfolio", "Crypto portfolio", "All your exchanges in one ledger"],
-    ["creator/skills/creator-content-writer", "Captions and scripts", "English, Hindi, Punjabi, Hinglish"],
-    ["creator/skills/creator-content-plan", "Content calendar", "Festivals, repurposing, analytics"],
-    ["creator/skills/creator-brand-deals", "Brand deals", "Rates, pitches, contract red flags"]]]
-];
-document.getElementById("cols").innerHTML = COLS.map(([f, name, list]) =>
-  `<div class="col"><span class="flag" aria-hidden="true">${f}</span><h3>${name}</h3><ul>` +
-  list.map(([p, t, d]) => `<li><a href="${REPO}${p}/SKILL.md">${t}</a><span>${d}</span></li>`).join("") + `</ul></div>`).join("");
-
-document.querySelectorAll(".copy").forEach(b => b.addEventListener("click", async () => {
-  const text = b.previousElementSibling.textContent;
-  try { await navigator.clipboard.writeText(text); b.textContent = "Copied"; }
-  catch { b.textContent = "Select it"; }
-  b.classList.add("done"); setTimeout(() => { b.textContent = "Copy"; b.classList.remove("done"); }, 1800);
-}));
-</script>
+<script src="calc.js"></script>
+<script src="site.js"></script>
+<script>window.hallmarkSlots = (m) => { for (const [k, v] of Object.entries(m)) { const s = document.querySelector(`[data-slot="${k}"]`); if (!s) continue; const im = new Image(); im.src = typeof v === 'string' ? v : v.src; im.alt = (typeof v === 'object' && v.alt) || s.dataset.alt || ''; s.querySelectorAll(':scope > img').forEach((o) => o.remove()); s.prepend(im); } };
+document.querySelectorAll('[data-slot] img').forEach((i) => { if (i.complete && !i.naturalWidth) i.remove(); else i.addEventListener('error', () => i.remove(), { once: true }); });</script>
 </body>
 </html>

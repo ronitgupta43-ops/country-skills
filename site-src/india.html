@@ -1,0 +1,53 @@
+<!-- India tax skills: regime, capital gains, GST, crypto | Free AI skills for Indian income tax (new vs old regime), LTCG and STCG, GST, crypto at 30% and NRI returns, using Tax Year 2026-27 rules. -->
+<section class="container hero">
+  <div class="head">
+    <h1>India, sorted by slab</h1>
+    <p class="lead">Regime, capital gains, GST and crypto, with Tax Year 2026-27 rules.</p>
+    <div class="actions"><a class="btn btn--primary" href="index.html#install">Install free</a></div>
+  </div>
+  <figure class="product sheet media" style="--r:0.8deg">
+    <img src="demo.gif" alt="Recording: Claude answers which tax regime to pick for a ₹15 lakh salary" width="1280" height="720">
+    <figcaption class="cap">A real answer from india-income-tax, recorded in the Claude app.</figcaption>
+  </figure>
+</section>
+
+<section class="container section">
+  <h2>Try the regime check</h2>
+  <div class="calc sheet sheet--card">
+    <form data-calc="india">
+      <fieldset>
+        <legend>Your year</legend>
+        <label>Gross income (₹)<input name="gross" type="number" inputmode="numeric" min="0" step="10000" value="1500000"></label>
+        <label class="check"><input name="salaried" type="checkbox" checked> I’m salaried</label>
+        <label>80C investments (₹) <span class="hint">counted up to ₹1,50,000</span><input name="c80" type="number" inputmode="numeric" min="0" step="5000" value="200000"></label>
+        <label>Other old-regime deductions (₹) <span class="hint">80D, HRA, home loan</span><input name="other" type="number" inputmode="numeric" min="0" step="5000" value="0"></label>
+      </fieldset>
+    </form>
+    <div class="result sheet--fluoro" aria-live="polite"><p>Fill in the form to compare.</p></div>
+  </div>
+</section>
+
+<section class="container section">
+  <h2>Numbers worth knowing</h2>
+  <div class="wall">
+    <div class="sheet sheet--fluoro w6" style="--r:-1deg"><span class="fig">₹12 lakh</span><p>taxable income with zero tax under the new regime</p></div>
+    <div class="sheet w6" style="--r:0.7deg"><span class="fig">₹1.25 lakh</span><p>LTCG on listed shares and equity funds, tax-free each year</p></div>
+    <div class="sheet w4" style="--r:0.5deg"><span class="fig">30%</span><p>flat tax on crypto gains, plus 4% cess</p></div>
+    <div class="sheet w4" style="--r:-0.6deg"><span class="fig">18%</span><p>GST on most services</p></div>
+    <div class="sheet w4" style="--r:1deg"><span class="fig">₹20 lakh</span><p>service turnover before GST registration in most states</p></div>
+  </div>
+</section>
+
+<section class="container section">
+  <h2>What you can ask</h2>
+  <ul class="asks">
+    <li><q>Is 12 lakh tax free if I’m salaried?</q><a href="https://github.com/ronitgupta43-ops/country-skills/blob/main/plugins/india-finance/skills/india-income-tax/SKILL.md">india-income-tax</a></li>
+    <li><q>Here’s my Zerodha tradebook. How much LTCG do I owe?</q><a href="https://github.com/ronitgupta43-ops/country-skills/blob/main/plugins/india-finance/skills/india-capital-gains/SKILL.md">india-capital-gains</a></li>
+    <li><q>Check this GSTIN and tell me CGST or IGST.</q><a href="https://github.com/ronitgupta43-ops/country-skills/blob/main/plugins/india-finance/skills/india-gst/SKILL.md">india-gst</a></li>
+    <li><q>I sold Bitcoin on WazirX. What’s the tax and TDS?</q><a href="https://github.com/ronitgupta43-ops/country-skills/blob/main/plugins/india-finance/skills/india-crypto-tax/SKILL.md">india-crypto-tax</a></li>
+    <li><q>I’m a YouTuber. Can I use 44ADA?</q><a href="https://github.com/ronitgupta43-ops/country-skills/blob/main/plugins/india-finance/skills/india-creator-tax/SKILL.md">india-creator-tax</a></li>
+    <li><q>Moving back from Canada. Am I RNOR?</q><a href="https://github.com/ronitgupta43-ops/country-skills/blob/main/plugins/india-finance/skills/india-nri-return/SKILL.md">india-nri-return</a></li>
+    <li><q>Make my resume work for Indian product companies.</q><a href="https://github.com/ronitgupta43-ops/country-skills/blob/main/plugins/india-jobs/skills/india-resume/SKILL.md">india-resume</a></li>
+    <li><q>Mock interview me for a campus placement.</q><a href="https://github.com/ronitgupta43-ops/country-skills/blob/main/plugins/india-jobs/skills/india-interview-prep/SKILL.md">india-interview-prep</a></li>
+  </ul>
+</section>

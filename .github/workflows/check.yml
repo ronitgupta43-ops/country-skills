@@ -15,6 +15,10 @@ jobs:
           done
       - name: Skill tree and embedded code are up to date
         run: python3 tools/build.py --check
+      - name: Website pages are built and calculators match the Python
+        run: |
+          python3 tools/build_site.py --check
+          python3 tools/check_site.py
       - name: Scripts pass their self-checks
         run: |
           python3 plugins/canada-finance/skills/canada-registered-accounts/scripts/tfsa_room.py --start 2022
