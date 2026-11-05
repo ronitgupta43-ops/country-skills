@@ -1,4 +1,4 @@
-# Handoff  (updated 2026-11-02)
+# Handoff  (updated 2026-11-05)
 
 ## What this repo is
 Free, MIT-licensed AI skills for tax, money, jobs, creators and crypto in India, Canada and the US. 27 skills in 9 plugins. Works in Claude Code, the Claude app, Codex, Gemini, Cursor and Copilot. Goal: GitHub stars and an application to Claude for Open Source.
@@ -35,7 +35,9 @@ Free, MIT-licensed AI skills for tax, money, jobs, creators and crypto in India,
 - Promo reels: tax-regime video (docs/media) and a 20s reel with Runway pictures (not in repo)
 
 ## Next / open
-- Post the new reel and website
+- Promotion: posted on r/ClaudeAI, BuildWithClaude and r/SideProject (7.4k views, mostly Canada). r/opensource needs a 1-year-old account; finance subs ban self-promotion. Next: r/coolgithubprojects, r/ClaudeCode, Show HN, dev.to
+- Awesome lists: PRs ready for travisvn/awesome-claude-skills, BehiSecc/awesome-claude-skills, ccplugins/awesome-claude-code-plugins. Issue already open on ComposioHQ/awesome-claude-skills
+- From Nov 15 (repo 14 days old): hesreallyhim/awesome-claude-code via its issue form only, never a PR. At 20 stars: heilcheng/awesome-agent-skills. Later: VoltAgent/awesome-agent-skills (needs real usage)
 - Skill idea from r/IndiaInvestments: RSUs and foreign stocks for Indian residents (vesting tax, Schedule FA, foreign tax credit)
 - Rules change each January: follow the yearly-update issue checklist
 
@@ -43,4 +45,5 @@ Free, MIT-licensed AI skills for tax, money, jobs, creators and crypto in India,
 - Wix Madefor fonts: ₹ lives in the latin-ext files, so keep both unicode-range faces
 - JS rounding must match Python's round-half-even (pyRound in calc.js)
 - The cloud workspace can't reach Google Fonts, github.io or Runway downloads; fonts are self-hosted via npm fontsource
+- CI runs Python 3.14: a bare % in an argparse help string crashes it, write "percent"
 - pkill with a pattern that matches your own command kills the shell
