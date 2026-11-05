@@ -36,7 +36,7 @@ Free, MIT-licensed AI skills for tax, money, jobs, creators and crypto in India,
 
 ## Next / open
 - Promotion: posted on r/ClaudeAI, BuildWithClaude and r/SideProject (7.4k views, mostly Canada). r/opensource needs a 1-year-old account; finance subs ban self-promotion. Next: r/coolgithubprojects, r/ClaudeCode, Show HN, dev.to
-- Awesome lists: PRs ready for travisvn/awesome-claude-skills, BehiSecc/awesome-claude-skills, ccplugins/awesome-claude-code-plugins. Issue already open on ComposioHQ/awesome-claude-skills
+- Awesome lists: PRs open on travisvn/awesome-claude-skills#1406 and BehiSecc/awesome-claude-skills#1199 (2026-11-05). ccplugins has pull requests turned off. Issue open on ComposioHQ/awesome-claude-skills
 - From Nov 15 (repo 14 days old): hesreallyhim/awesome-claude-code via its issue form only, never a PR. At 20 stars: heilcheng/awesome-agent-skills. Later: VoltAgent/awesome-agent-skills (needs real usage)
 - Skill idea from r/IndiaInvestments: RSUs and foreign stocks for Indian residents (vesting tax, Schedule FA, foreign tax credit)
 - Rules change each January: follow the yearly-update issue checklist
