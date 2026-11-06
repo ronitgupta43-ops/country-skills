@@ -8,9 +8,12 @@
 |---|---|
 | Crypto tax apps (Koinly, CoinTracker) | `crypto-portfolio` + `canada-crypto-tax` / `india-crypto-tax` / `us-crypto-tax` |
 | Indian tax filing helpers (ClearTax-style regime and capital gains calculators) | `india-income-tax`, `india-capital-gains`, `india-gst` |
-| Tax and contribution calculators | `us-income-tax`, `us-retirement-accounts`, `canada-registered-accounts`, `canada-capital-gains` |
+| Tax and contribution calculators | `us-income-tax`, `us-retirement-accounts`, `canada-registered-accounts`, `canada-capital-gains`, `india-rsu-foreign-stocks` |
+| Mortgage and home-buying calculators | `canada-first-home` |
+| Debt payoff apps | `debt-payoff` |
 | Resume writers and interview coaches | `canada-resume`, `india-resume`, `us-resume` and the `*-interview-prep` skills |
 | Creator managers and rate-card tools | `creator-brand-deals`, `creator-content-plan`, `creator-content-writer` |
+| Creator tax help | `canada-creator-tax`, `india-creator-tax`, `us-creator-tax` |
 
 It covers the common cases for individuals. For businesses, DeFi-heavy crypto or anything unusual, a professional is still worth paying.
 

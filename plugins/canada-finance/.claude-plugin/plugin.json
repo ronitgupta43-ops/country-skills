@@ -1,6 +1,6 @@
 {
   "name": "canada-finance",
-  "description": "TFSA/RRSP/FHSA room, ACB and capital gains with the superficial loss rule, first home (down payment, stress test, land transfer tax)",
+  "description": "TFSA/RRSP/FHSA room, ACB and capital gains with the superficial loss rule, crypto tax, creator tax and HST, first home (down payment, stress test, land transfer tax)",
   "version": "0.1.0",
   "author": {
     "name": "Ronit Gupta"
