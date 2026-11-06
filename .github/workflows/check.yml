@@ -31,3 +31,4 @@ jobs:
           python3 plugins/crypto/skills/crypto-portfolio/scripts/crypto.py examples/crypto-ledger.csv ca
           python3 plugins/canada-finance/skills/canada-first-home/scripts/home.py --price 700000 --down 50000 --rate 4.5 --years 30 --first-time --toronto --income 130000
           python3 plugins/money/skills/debt-payoff/scripts/payoff.py examples/debts.csv --budget 1200
+          python3 plugins/india-finance/skills/india-rsu-foreign-stocks/scripts/rsu.py examples/rsu-events.csv --slab 30

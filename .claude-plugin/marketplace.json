@@ -19,7 +19,7 @@
     {
       "name": "india-finance",
       "source": "./plugins/india-finance",
-      "description": "Income tax new vs old regime, STCG/LTCG on shares and MFs, GST for businesses, returning NRI checklist"
+      "description": "Income tax new vs old regime, STCG/LTCG on shares and MFs, GST for businesses, returning NRI checklist, RSUs and foreign stocks"
     },
     {
       "name": "india-jobs",

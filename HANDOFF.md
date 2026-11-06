@@ -1,7 +1,7 @@
 # Handoff  (updated 2026-11-05)
 
 ## What this repo is
-Free, MIT-licensed AI skills for tax, money, jobs, creators and crypto in India, Canada and the US. 27 skills in 9 plugins. Works in Claude Code, the Claude app, Codex, Gemini, Cursor and Copilot. Goal: GitHub stars and an application to Claude for Open Source.
+Free, MIT-licensed AI skills for tax, money, jobs, creators and crypto in India, Canada and the US. 28 skills in 9 plugins. Works in Claude Code, the Claude app, Codex, Gemini, Cursor and Copilot. Goal: GitHub stars and an application to Claude for Open Source.
 
 ## Layout
 - plugins/<plugin>/skills/<skill>/SKILL.md - the skills; scripts/ beside them hold the calculators
@@ -28,6 +28,7 @@ Free, MIT-licensed AI skills for tax, money, jobs, creators and crypto in India,
 - Website: no eyebrows or all-caps labels, every animation has a reduced-motion fallback.
 
 ## Done recently
+- New skill: india-rsu-foreign-stocks (vest perquisite, 24-month rule, 12.5% LTCG, Schedule FA, Form 67, FAST-DS until 31 Dec 2026)
 - New skills: canada-first-home (down payment, CMHC, stress test, ON/Toronto LTT) and money/debt-payoff (avalanche vs snowball)
 - Six-page website (home, india, canada, us, creators, crypto) with live calculators, video and photos
 - Crypto plugin (crypto-portfolio: CA/IN/US tax from exchange CSVs, no API keys)
@@ -38,7 +39,6 @@ Free, MIT-licensed AI skills for tax, money, jobs, creators and crypto in India,
 - Promotion: posted on r/ClaudeAI, BuildWithClaude and r/SideProject (7.4k views, mostly Canada). r/opensource needs a 1-year-old account; finance subs ban self-promotion. Next: r/coolgithubprojects, r/ClaudeCode, Show HN, dev.to
 - Awesome lists: PRs open on travisvn/awesome-claude-skills#1406 and BehiSecc/awesome-claude-skills#1199 (2026-11-05). ccplugins has pull requests turned off. Issue open on ComposioHQ/awesome-claude-skills
 - From Nov 15 (repo 14 days old): hesreallyhim/awesome-claude-code via its issue form only, never a PR. At 20 stars: heilcheng/awesome-agent-skills. Later: VoltAgent/awesome-agent-skills (needs real usage)
-- Skill idea from r/IndiaInvestments: RSUs and foreign stocks for Indian residents (vesting tax, Schedule FA, foreign tax credit)
 - Rules change each January: follow the yearly-update issue checklist
 
 ## Gotchas
