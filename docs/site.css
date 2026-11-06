@@ -111,8 +111,9 @@ main:has(.hour) .hero--hour .head .btn--secondary { background: color-mix(in okl
 /* the facts: one glass tally of rows */
 .wall { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-2xs); margin-top: var(--space-2xl); padding: var(--space-xs); }
 .wall:has(> :nth-child(3):last-child) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.wall:has(> :nth-child(3):last-child) .sheet { flex-direction: column; gap: var(--space-2xs); }
 .wall .sheet { display: flex; align-items: baseline; gap: var(--space-lg); padding: var(--space-lg); border-radius: var(--radius-inner); }
-.wall .fig { font: 500 clamp(2rem, 3.2vw, 2.75rem)/1 var(--font-display); letter-spacing: -0.02em; min-width: 4.5ch; color: var(--color-ink); }
+.wall .fig { font: 500 clamp(2rem, 3.2vw, 2.75rem)/1 var(--font-display); letter-spacing: -0.02em; min-width: 4.5ch; flex-shrink: 0; color: var(--color-ink); }
 .wall .sheet--fluoro .fig { color: var(--color-accent-2); }
 .wall .sheet p { color: var(--color-ink-2); }
 
@@ -186,7 +187,7 @@ main:has(.hour) .hero--hour .head .btn--secondary { background: color-mix(in okl
 
 @media (max-width: 60rem) {
   .hero > .head, .hero > .product, .two > .words, .two > .media, .two.flip > .words, .two.flip > .media { grid-column: 1 / -1; order: initial; }
-  .boards, .steps, .wall { grid-template-columns: minmax(0, 1fr); }
+  .boards, .steps, .wall, .wall:has(> :nth-child(3):last-child) { grid-template-columns: minmax(0, 1fr); }
   .calc, .merge { grid-template-columns: minmax(0, 1fr); }
   .arrow { rotate: 90deg; justify-self: center; }
   .nav ul { display: none; }
