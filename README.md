@@ -111,7 +111,7 @@ More examples in [examples/](examples). Python 3.9+, no dependencies.
 
 ## Contributing
 
-Know your country's tax rules or job market? Add it. See [CONTRIBUTING.md](CONTRIBUTING.md). Open issues for the UK, Australia and UAE are waiting.
+Know your country's tax rules or job market? Add it. See [CONTRIBUTING.md](CONTRIBUTING.md). Start with a [good first issue](https://github.com/ronitgupta43-ops/country-skills/issues?q=is%3Aopen+label%3A%22good+first+issue%22): the UK, Australia and UAE are waiting, and one skill is a fine first pull request.
 
 Not financial, tax or legal advice.
 

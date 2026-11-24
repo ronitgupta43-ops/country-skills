@@ -1,4 +1,4 @@
-# Handoff  (updated 2026-11-05)
+# Handoff  (updated 2026-11-24)
 
 ## What this repo is
 Free, MIT-licensed AI skills for tax, money, jobs, creators and crypto in India, Canada and the US. 28 skills in 9 plugins. Works in Claude Code, the Claude app, Codex, Gemini, Cursor and Copilot. Goal: GitHub stars and an application to Claude for Open Source.
@@ -36,6 +36,7 @@ Free, MIT-licensed AI skills for tax, money, jobs, creators and crypto in India,
 - Promo reels: tax-regime video (docs/media) and a 20s reel with Runway pictures (not in repo)
 
 ## Next / open
+- Claude for Open Source application (Nov 2026): applying under "apply anyway" with country-skills first and canada-tax-toolkit second. Biggest gap vs the rules is outside contributors: steer people to the good first issues (UK #1, Australia #3, UAE #4)
 - Promotion: posted on r/ClaudeAI, BuildWithClaude and r/SideProject (7.4k views, mostly Canada). r/opensource needs a 1-year-old account; finance subs ban self-promotion. Next: r/coolgithubprojects, r/ClaudeCode, Show HN, dev.to
 - Awesome lists: PRs open on travisvn/awesome-claude-skills#1406 and BehiSecc/awesome-claude-skills#1199 (2026-11-05). ccplugins has pull requests turned off. Issue open on ComposioHQ/awesome-claude-skills
 - From Nov 15 (repo 14 days old): hesreallyhim/awesome-claude-code via its issue form only, never a PR. At 20 stars: heilcheng/awesome-agent-skills. Later: VoltAgent/awesome-agent-skills (needs real usage)
